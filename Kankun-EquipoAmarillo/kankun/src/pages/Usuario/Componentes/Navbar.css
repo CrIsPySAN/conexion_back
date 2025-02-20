@@ -1,0 +1,151 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  background: #ffffff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-brand {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  text-decoration: none;
+}
+
+.nav-extra {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-search {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.nav-profile {
+  color: #2C2C2C;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-profile:hover {
+  color: #F8C300;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #2C2C2C;
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-menu a {
+  color: #2C2C2C;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #F8C300;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-login {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #2C2C2C;
+  color: #2C2C2C;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background: #F8C300;
+  color: #2C2C2C;
+}
+
+.btn-register {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #F8C300;
+  border: none;
+  color: #2C2C2C;
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background: #FDD835;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 1rem;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+}

@@ -1,0 +1,128 @@
+
+.podium-container {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+  background: #f0aaaa;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.podium-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.podium-header h2 {
+  font-size: 2.8rem;
+  color: #2A2A2A;
+  margin-bottom: 0.5rem;
+}
+
+.category-description {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+.podium-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.podium-card {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #f8f8f8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.podium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.podium-image {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.podium-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+
+.podium-rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #F8C300; 
+  color: #2A2A2A;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.podium-details {
+  padding: 1rem;
+  background: #fff;
+}
+
+.podium-title {
+  font-size: 1.6rem;
+  color: #2A2A2A;
+  margin-bottom: 0.5rem;
+}
+
+.podium-info,
+.podium-rating,
+.podium-location {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.info-icon,
+.star-icon,
+.location-icon {
+  font-size: 1rem;
+}
+
+
+.podium-details-button {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: #F8C300;
+  color: #2A2A2A;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.podium-details-button:hover {
+  background: #e0a800;
+}
